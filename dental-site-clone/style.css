@@ -18,51 +18,184 @@ a {
 a:hover {
   font-weight: 600;
 }
+img {
+  max-width: 100%;
+}
 header {
+  position: relative;
+  padding-bottom: 7px;
+  margin-bottom: 15px;
+  text-align: center;
   background-color: #004E8E;
-  height: 45px;
   border-bottom: 1px solid rgb(31, 153, 231);
   font-size: 11px;
   color: white;
 }
-
-.sticky-right{
-  float: right;
+header div.row {
+  display: flex;
+  justify-content: center;
 }
 
-.container {
-  width: 80%;
+header div.row:first-child {
+  margin-bottom: 4px;
+  padding-top: 11px;
+  padding-bottom: 8px;
+  background-color: #005AA3;
+}
+
+header div.row:last-child {
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+/******* Phone, address and social *******/
+
+div.pipe {
+  display: inline-block;
+  height: 13px;
+  overflow: visible;
+  padding: 0 15px;
+  position: relative;
+  top: 1px;
+}
+div.pipe:first-child {
+  border-right: 1px solid rgb(31, 153, 231);
+}
+div#social {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 3px;
+  border-left: 1px solid rgb(31, 153, 231);
+  top: 0;
+}
+#social img {
+  margin: 0 4px;
+}
+/*********************************/
+/******* Main content area *******/
+
+.main-contain {
+  width: 95%;
+  min-height: 100%;
   margin: 0 auto;
-  min-height: 100px;
-  margin-top: 20px;
-  border-radius: 2px;
-  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 9px;
+  padding: 27px;
   background-color: white;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
 }
 
-  .container img {
-    max-width: 100%;
+#logo {
+  width: 265px;
+}
+img.burger {
+  float: right;
+  position: relative;
+  top: 9px;
+  right: 2px;
+}
+nav {
+  display: none;
+}
+img.bullets {
+  display: block;
+  margin: 8px auto;
+}
+ul.nav {
+  display: inline-flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.main-contain .nav {
+  font-size: 22px;
+  color: #0063AB;
+}
+.main-contain .nav li {
+  padding: 0 9px;
+}
+.main-contain .nav li:first-child {
+  color: #13A2D8;
+}
+
+/******* Responsive columns *******/
+
+.main-contain div.row {
+  width: 100%;
+  /*background-color: rgba(214, 124, 106, 0.68);*/
+}
+div.col {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  div.row {
+    display: flex;
+    justify-content: space-between;
+  }
+  div.col {
+    display: inline-block;
+    max-width: 31%;
+  }
+}
+.row .col a {
+  color: #464646;
+  font-weight: 600px;
+}
+
+@media (min-width: 955px) {
+  header div.row {
+    display: inline-flex;
   }
 
-@media (max-width: 600px) {
-  header {
-    text-align: center;
+  header div.row:first-child {
+    background-color: #004E8E;
+    position: relative;
+    top: 2px;
+    left: 10px;
   }
-
-  header a.sticky-right {
+  .main-contain {
+    width: 930px;
+  }
+  #logo {
+    width: 316px;
+  }
+  img.burger {
     display: none;
   }
+  nav {
+    display: block;
+    float: right;
+    position: relative;
+    right: 11px;
+    top: 29px;
+  }
+
 }
 
-@media (max-width:699px) and (min-width:600px) {
-    header a.sticky-right {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-    }
-}​
+.main-contain p {
+  font-size: 13px;
+}
+iframe {
+  width: 100%;
+  height: 469px;
+}
+
 footer {
   clear: both;
-  height:60px;
-  background-color: black;
+  height:90px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  /*background-color: black;*/
+}
+footer div {
+  display: inline-block;
+  margin: 0 auto;
+}
+footer .nav {
+  color: white;
+}
+footer .nav li {
+  margin: 9px;
 }
