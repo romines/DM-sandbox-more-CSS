@@ -127,6 +127,8 @@ ul.nav {
 }
 div.col {
   text-align: center;
+  position: relative;
+  padding-bottom: 6%;
 }
 @media (min-width: 768px) {
   div.row {
@@ -136,6 +138,11 @@ div.col {
   div.col {
     display: inline-block;
     max-width: 31%;
+  }
+  .row .col a {
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
   }
 }
 .row .col a {
